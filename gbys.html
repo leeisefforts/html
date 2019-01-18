@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="keywords" content="" />
+        <meta http-equiv="description" content="" />
+        <title>广播影视 - 牡丹江数字文化服务</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!--分页-->
+        <link rel="stylesheet" href="css/pagination.css">
+        <style>
+</style>
+    </head>
+    
+    <body>
+        <!--标题栏-->
+        <div class="background bg2">
+            <img class="img1" src="./img/toplogo.png" />
+            <div class="right" style="margin-right:2%;">
+                <div class="right">	<a href="./index.html">首页</a><a href="">|</a>
+
+                    <div id="loginCsiDiv" style="float:left;"></div>	<a href="./login.html">会员中心</a></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div id="navbar-nav" style="width:100%; text-align:center;">
+                <ul class="nav navbar-nav bird">
+                    <li>
+                        <a href="./whdt.html">
+                            <img src="./img/1.png" onmouseover="showB(this)" onmouseout="showA(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whhd.html">
+                            <img src="./img/2.png" onmouseover="showD(this)" onmouseout="showC(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whfw.html">
+                            <img src="./img/3.png" onmouseover="showF(this)" onmouseout="showE(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whcy.html">
+                            <img src="./img/4.png" onmouseover="showH(this)" onmouseout="showG(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./gbys.html">
+                            <img src="./img/5.png" onmouseover="showJ(this)" onmouseout="showI(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./xwcb.html">
+                            <img src="./img/6.png" onmouseover="showL(this)" onmouseout="showK(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whsc.html">
+                            <img src="./img/7.png" onmouseover="showN(this)" onmouseout="showM(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./lswh.html">
+                            <img src="./img/8.png" onmouseover="showP(this)" onmouseout="showO(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whmr.html">
+                            <img src="./img/9.png" onmouseover="showR(this)" onmouseout="showQ(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./guestbook.html">
+                            <img src="./img/10.png" onmouseover="showT(this)" onmouseout="showS(this)"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--内容区-->
+        <div class="body-content">
+            <!--title-->
+            <div class="title">
+                <p>广播影视</p>
+                <p>首页>广播影视</p>
+            </div>
+            <!--小导航-->
+            <div class="sm-nav">
+                <ul>
+                    <li><a href="#" id="b1" style="border-bottom:2px solid #13c7a9; line-height:53px; display:inline-block; color:#13c7a9;" onclick="getData(31,33)">行业概况</a>
+                    </li>
+                    <li><a href="#" id="b2" onclick="getData(32,36)">广播</a>
+                    </li>
+                    <!--<li><a href="#" id="b3">电视</a>
+                    </li>
+                    <li><a href="#" id="b4">电影</a>
+                    </li>-->
+                </ul>
+            </div>
+            <!--主要显示区-->
+            <div style="padding:40px 0;" id="bb1">
+                <div class="box1" style="margin-top:-30px;">
+                    <ul class="part2" style="display:inline-block;">
+                        <li><a id="a1" class="on1" style="margin-left:28px;" onclick="getData(31,33)">行业简介</a>
+                        </li>
+                        <li><a id="a2" onclick="getData(31,34)">行业管理</a>
+                        </li>
+                        <li><a id="a3" onclick="getData(31,35)">台站建设</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0; " id="a11">
+                    <ul style="line-height:40px;">
+
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0;display:none; " id="a22">
+                    <ul style="line-height:40px;">
+                        <a href="http://www.mdjggwh.com/xyglz/1228.jhtml">
+                            
+                        </a>
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0;display:none; " id="a33">
+                    <ul style="line-height:40px;">
+                        <a href="http://www.mdjggwh.com/tzjs/1225.jhtml">
+                            
+                        </a>
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <!--2-->
+            <div style=" display:none;" id="bb2">
+                <div class="box1">
+                    <ul class="part2" style="display:inline-block;">
+                        <li><a id="a4" class="on1" style="margin-left:28px;" onclick="getData(32,36)">新闻广播</a>
+                        </li>
+                        <li><a id="a5" onclick="getData(32,37)">城市广播</a>
+                        </li>
+                        <li><a id="a6" onclick="getData(32,38)">交通广播</a>
+                        </li>
+                        <li><a id="a7" onclick="getData(32,39)">体育广播</a>
+                        </li>
+                        <li><a id="a8" onclick="getData(32,40)">教学广播</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0; " id="a44">
+                    <ul style="line-height:40px;">
+                        
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0;display:none; " id="a55">
+                    <ul style="line-height:40px;">
+                        
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0;display:none; " id="a66">
+                    <ul style="line-height:40px;">
+                        
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0;display:none; " id="a77">
+                    <ul style="line-height:40px;"></ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0;display:none; " id="a88">
+                    <ul style="line-height:40px;"></ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <!--3-->
+            <div style="display:none;" id="bb3">
+                <div class="box1">
+                    <table>
+                        <tr>
+                            <td class="table-left">类型：</td>
+                            <td class="table-right">
+                                <ul style="display:inline-block;">
+                                    <li><a href="/html/js/" id="s2" class="border">军事</a>
+                                    </li>
+                                    <li><a href="/html/gz/" id="s3" class="border">古装</a>
+                                    </li>
+                                    <li><a href="/html/dz/" id="s4" class="border">谍战</a>
+                                    </li>
+                                    <li><a href="/html/yq/" id="s5" class="border">言情</a>
+                                    </li>
+                                    <li><a href="/html/xj/" id="s6" class="border">喜剧</a>
+                                    </li>
+                                    <li><a href="/html/jf/" id="s7" class="border">警匪</a>
+                                    </li>
+                                    <li><a href="/html/ls/" id="s8" class="border">历史</a>
+                                    </li>
+                                    <li><a href="/html/ll/" id="s9" class="border">伦理</a>
+                                    </li>
+                                    <li><a href="/html/xy/" id="s9" class="border">悬疑</a>
+                                    </li>
+                                    <li><a href="/html/wx/" id="s9" class="border">武侠</a>
+                                    </li>
+                                    <li><a href="/html/dszs/" id="s9" class="border">都市</a>
+                                    </li>
+                                    <li><a href="/html/ox/" id="s9" class="border">偶像</a>
+                                    </li>
+                                    <li><a href="/html/sh/" id="s9" class="border">神话</a>
+                                    </li>
+                                    <li><a href="/html/dzz/" id="s9" class="border">动作</a>
+                                    </li>
+                                    <li><a href="/html/kh/" id="s9" class="border">科幻</a>
+                                    </li>
+                                    <li><a href="/html/lz/" id="s9" class="border">励志</a>
+                                    </li>
+                                    <li><a href="/html/qj/" id="s9" class="border">情景</a>
+                                    </li>
+                                    <li><a href="/html/jt/" id="s9" class="border">家庭</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #ccc;height:50px;">
+                            <td valign="top" class="table-left" style="padding-top:10px;">年代：</td>
+                            <td class="table-right">
+                                <ul style="display:inline-block; margin-top:-10px;">
+                                    <li><a href="/html/2010/" id="b" class="border">2010</a>
+                                    </li>
+                                    <li><a href="/html/2011/" id="c" class="border">2011</a>
+                                    </li>
+                                    <li><a href="/html/2012/" id="d" class="border">2012</a>
+                                    </li>
+                                    <li><a href="/html/2013/" id="e" class="border">2013</a>
+                                    </li>
+                                    <li><a href="/html/2014/" id="e" class="border">2014</a>
+                                    </li>
+                                    <li><a href="/html/2015/" id="e" class="border">2015</a>
+                                    </li>
+                                    <li><a href="/html/2016/" id="e" class="border">2016</a>
+                                    </li>
+                                    <li><a href="/html/2017/" id="e" class="border">2017</a>
+                                    </li>
+                                    <li><a href="/html/2018/" id="e" class="border">2018</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #ccc;height:50px;">
+                            <td valign="top" class="table-left" style="padding-top:10px;">地区：</td>
+                            <td class="table-right">
+                                <ul style="display:inline-block; margin-top:-10px;">
+                                    <li><a href="/html/dl/" id="b" class="border">大陆</a>
+                                    </li>
+                                    <li><a href="/html/hg/" id="c" class="border">韩国</a>
+                                    </li>
+                                    <li><a href="/html/tg/" id="d" class="border">泰国</a>
+                                    </li>
+                                    <li><a href="/html/xg/" id="e" class="border">香港</a>
+                                    </li>
+                                    <li><a href="/html/mg/" id="e" class="border">美国</a>
+                                    </li>
+                                    <li><a href="/html/tw/" id="e" class="border">台湾</a>
+                                    </li>
+                                    <li><a href="/html/rb/" id="e" class="border">日本</a>
+                                    </li>
+                                    <li><a href="/html/yg/" id="e" class="border">英国</a>
+                                    </li>
+                                    <li><a href="/html/xjp/" id="e" class="border">新加坡</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0; ">
+                    <ul style="line-height:40px;">
+                        <a href="http://www.mdjggwh.com/js/1240.jhtml">
+                            <li class="box">
+                                <p>新闻联播</p>
+                                <p class="data">2018-12-18 08:20:40</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <!--4-->
+            <div style="display:none;" id="bb4">
+                <div class="box1">
+                    <table>
+                        <tr>
+                            <td class="table-left">类型：</td>
+                            <td class="table-right">
+                                <ul style="display:inline-block;">
+                                    <li><a href="/html/jsq/" id="s2" class="border">军事</a>
+                                    </li>
+                                    <li><a href="/html/gzzz/" id="s3" class="border">古装</a>
+                                    </li>
+                                    <li><a href="/html/dzss/" id="s4" class="border">谍战</a>
+                                    </li>
+                                    <li><a href="/html/yqzz/" id="s5" class="border">言情</a>
+                                    </li>
+                                    <li><a href="/html/xjzz/" id="s6" class="border">喜剧</a>
+                                    </li>
+                                    <li><a href="/html/jfzz/" id="s7" class="border">警匪</a>
+                                    </li>
+                                    <li><a href="/html/lszz/" id="s8" class="border">历史</a>
+                                    </li>
+                                    <li><a href="/html/llzz/" id="s9" class="border">伦理</a>
+                                    </li>
+                                    <li><a href="/html/xyzz/" id="s9" class="border">悬疑</a>
+                                    </li>
+                                    <li><a href="/html/wxzz/" id="s9" class="border">武侠</a>
+                                    </li>
+                                    <li><a href="/html/dszz/" id="s9" class="border">都市</a>
+                                    </li>
+                                    <li><a href="/html/oxzz/" id="s9" class="border">偶像</a>
+                                    </li>
+                                    <li><a href="/html/shz/" id="s9" class="border">神话</a>
+                                    </li>
+                                    <li><a href="/html/dzzz/" id="s9" class="border">动作</a>
+                                    </li>
+                                    <li><a href="/html/khz/" id="s9" class="border">科幻</a>
+                                    </li>
+                                    <li><a href="/html/lzzzs/" id="s9" class="border">励志</a>
+                                    </li>
+                                    <li><a href="/html/qjzz/" id="s9" class="border">情景</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #ccc;height:50px;">
+                            <td valign="top" class="table-left" style="padding-top:10px;">年代：</td>
+                            <td class="table-right">
+                                <ul style="display:inline-block; margin-top:-10px;">
+                                    <li><a href="/html/2010n/" id="b" class="border">2010</a>
+                                    </li>
+                                    <li><a href="/html/2011n/" id="c" class="border">2011</a>
+                                    </li>
+                                    <li><a href="/html/2012n/" id="d" class="border">2012</a>
+                                    </li>
+                                    <li><a href="/html/2013n/" id="e" class="border">2013</a>
+                                    </li>
+                                    <li><a href="/html/2014n/" id="e" class="border">2014</a>
+                                    </li>
+                                    <li><a href="/html/2015n/" id="e" class="border">2015</a>
+                                    </li>
+                                    <li><a href="/html/2016a/" id="e" class="border">2016</a>
+                                    </li>
+                                    <li><a href="/html/2017n/" id="e" class="border">2017</a>
+                                    </li>
+                                    <li><a href="/html/2018a/" id="e" class="border">2018</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #ccc;height:50px;">
+                            <td valign="top" class="table-left" style="padding-top:10px;">地区：</td>
+                            <td class="table-right">
+                                <ul style="display:inline-block; margin-top:-10px;">
+                                    <li><a href="/html/dlz/" id="b" class="border">大陆</a>
+                                    </li>
+                                    <li><a href="/html/hgz/" id="c" class="border">韩国</a>
+                                    </li>
+                                    <li><a href="/html/tgz/" id="d" class="border">泰国</a>
+                                    </li>
+                                    <li><a href="/html/xgs/" id="e" class="border">香港</a>
+                                    </li>
+                                    <li><a href="/html/mgz/" id="e" class="border">美国</a>
+                                    </li>
+                                    <li><a href="/html/twz/" id="e" class="border">台湾</a>
+                                    </li>
+                                    <li><a href="/html/rbz/" id="e" class="border">日本</a>
+                                    </li>
+                                    <li><a href="/html/ygz/" id="e" class="border">英国</a>
+                                    </li>
+                                    <li><a href="/html/xjpz/" id="e" class="border">新加坡</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="box1 tiaozheng" style="padding:40px 0; ">
+                    <ul style="line-height:40px;"></ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!--右侧导航-->
+        <div class="right-nav2">
+            <ul style="list-style:none">
+                <a href="./ptjj.html">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/a.png">
+                    </li>
+                </a>
+                <a href="./gzjj.html">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/b.png">
+                    </li>
+                </a>
+                <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=whjj">
+		            <li>
+		                <img style=" max-width:80%;" src="./img/c.png">
+		            </li>
+		        </a>
+		        <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=type&tid=98">
+		            <li>
+		                <img style=" max-width:80%;" src="./img/d.png">
+		            </li>
+		        </a>
+            </ul>
+        </div>
+        <div id="footer1">
+            <p>ICP备案号：黑ICP备7235725号 Powered by 牡丹江公共文化云平台 Copyright © 2018-2025 www.mdjggwh.com, All Rights Reserved</p>
+        </div>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+<script>
+	function getData(id1,id2) {
+        var id1 = id1 || 31
+        var id2 = id2 || 33
+        $.post('http://132.232.133.48:8889/admin/getinfo/', {
+            f0: 4,
+            f1: id1,
+            f2: id2,
+        }, function(data) {
+            if (data.code == 200) {
+                var str = ''
+                for (var i = 0; i < data.list.length; i++) {
+                    str += `<a href="./content.html?id=` + data.list[i].id + `&type=gbys">
+		                <li class="box">
+		                   <p>` + data.list[i].title + `</p>
+						 
+		                   <p class="data">` + data.list[i].time + `</p>
+		                </li>
+		            </a>`
+                }
+                if(id1==31){
+                	switch (id2) {
+	                	case 33: $('#a11 ul').html(str)
+	                	break;
+	                	case 34: $('#a22 ul').html(str)
+	                	break;
+	                	case 35: $('#a33 ul').html(str)
+	                	break;
+	                }
+                }else if(id1==32){
+                	switch (id2) {
+	                	case 36: $('#a44 ul').html(str)
+	                	break;
+	                	case 37: $('#a55 ul').html(str)
+	                	break;
+	                	case 38: $('#a66 ul').html(str)
+	                	break;
+	                	case 39: $('#a77 ul').html(str)
+	                	break;
+	                	case 40: $('#a88 ul').html(str)
+	                	break;
+	                }
+                }
+                
+            }
+        })
+    }
+    getData()
+</script>
+</html>

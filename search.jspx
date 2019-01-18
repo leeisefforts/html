@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全文检索列表 - 牡丹江数字文化服务 - Powered by JEECMS</title>
+<link href="/r/cms/front.css" rel="stylesheet" type="text/css"/>
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="/r/cms/www/default/css/index.css" />
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script src="/r/cms/www/default/js/common.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]> 
+<script src="/r/cms/www/default/js/html5shiv.min.js"></script>
+<script src="/r/cms/www/default/js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+$(function() {
+	Cms.siteFlow("", location.href, document.referrer, "true");
+});
+</script>
+
+</head>
+
+<body>
+<section class="top">
+  <div class="yellow"></div><div class="red"></div><div class="blue"></div><div class="yellow"></div><div class="red"></div>	
+</section><link rel="stylesheet" type="text/css" href="/r/cms/www/default/css/login.css" />
+<script>
+function qkeypress(){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+}
+function query(){
+	$.post("/createToken.jspx", {}, function(data) {
+		$("#token").val(data.token);
+		$("#searchForm").submit();
+	}, "json");
+}
+$(function() {
+	$("input[name='q']").bind('keypress',function(event){
+	    if(event.keyCode == 13)     
+	    {  
+	    	event.preventDefault();
+	    	query();
+	    }  
+	});
+});
+</script>
+<header class="header rel">
+  <div class="header-jf"><a class="jf-btn" name="gb2big5" id="gb2big5">繁</a></div>
+  <Script Language=Javascript Src="/r/cms/gb2big5.js"></Script>
+  <div class="header-rss"><a class="rss-btn" href="/rss.jspx" target="_blank" title="RSS订阅">RSS</a></div>
+  <div class="header-tag"><a class="tag-btn" href="/tag.jspx" target="_blank" title="Tags标签">Tags</a></div>
+  <div class="container clearfix">
+    <a class="logo" href="/"></a>
+<nav class="nav">
+           <ul class="menu">
+        <li><a href="http://www.mdjggwh.com/html/ptjj/">平台简介</a></li>
+        <li><a href="http://www.mdjggwh.com/html/whdt/">文化地图</a></li>
+        <li><a href="http://www.mdjggwh.com/html/whhd/">文化活动</a></li>
+             
+        <li class="more">      
+      <a href="http://www.mdjggwh.com/html/whfw/">文化服务</a>
+          <ul class="menu-child">
+            <li><a href="http://www.mdjggwh.com/html/whcy/">文化产业</a></li>
+            <li><a href="http://www.mdjggwh.com/html/gbys/">广播影视</a></li>
+            <li><a href="http://www.mdjggwh.com/html/xwcb/">新闻出版</a></li>
+            <li><a href="http://www.mdjggwh.com/html/whsc/">文化市场</a></li>
+            <li><a href="http://www.mdjggwh.com/html/lswh/">历史文化</a></li>
+            <li><a href="http://www.mdjggwh.com/html/whmr/">文化名人</a></li>
+            <li><a href="http://www.mdjggwh.com/html/hdjl/">互动交流</a></li>
+            <li><a href="http://www.mdjggwh.com/html/gzjj/">工作简介</a></li>
+            <li><a href="http://www.mdjggwh.com/html/jqjj/">局情简介</a></li>
+            <li><a href="http://www.mdjggwh.com/html/jrjj/">今日聚焦</a></li>
+            <li><a href="http://www.mdjggwh.com/html/gggs/">公告公示</a></li>
+            <li><a href="/guestbook.jspx">留言板</a></li>
+          </ul>
+        </li> 
+      </ul>
+    </nav>    <div class="header-r">     
+      <div class="search">
+        <form action="/search.jspx" target="_blank" name="searchForm" id="searchForm">
+        <input type="text" name="q" value=""   maxlength="50" autocomplete="off" class="searchCon" style="width:202px;">
+        <input type="hidden" name="token" id="token" value="" />
+        <input type="button" value="" class="searchMenu" onclick="query()" >
+        </form>
+      </div>      
+      <div id="loginCsiDiv" style="float:left;"></div>
+	  <script type="text/javascript">
+		$(function(){
+			Cms.loginCsi("","loginCsiDiv",{"returnUrl":"http://www.mdjggwh.com/search.jspx?q=aa&token=936c3540-e181-4ebf-98cd-049643647743"});
+		});
+	   </script>
+    </div> 
+  </div>
+</header><div class="main container clearfix">
+  <section class="content_w850">
+    <div class="searchNav">您搜索的“<span>aa</span>”， 共有<span>2</span>个结果</div>
+    <div class="searchList">
+      <div class="item">
+        <div class="search-title"><a href="http://www.mdjggwh.com/qyfca/781.jhtml" title="牡丹江和音乐器有限公司简介" target="_blank">牡丹江和音乐器有限公司简介</a></div>
+        <div class="search-txt">
+牡丹江和音乐器有限公司简介牡丹江和音乐器有限公司创始于1988年，是生产和销售各种专业提琴系列的国际标准化企业。公司位于黑龙江省牡丹江市西安区海浪路199号。占地面积18,000平方米，建筑面积16,000平方米。公司专业生产提琴的员工有180名，其中工程师、技术员、提琴制作师36名。公司年生产量18,000支。目前公司的技术开发能力、生产工艺标准、质量检测仪器占全...        </div>
+        <div class="search-date"><a href="http://www.mdjggwh.com/html/qyfca/" target="_blank">企业风采</a><em>2018-12-05 21:47:02</em>浏览 <span>0</span></div>
+      </div>
+      <div class="item">
+        <div class="search-title"><a href="http://www.mdjggwh.com/whly/1154.jhtml" title="牡丹江市A级景区" target="_blank">牡丹江市A级景区</a></div>
+        <div class="search-txt">
+序号等级名称通讯地址联系电话1AAAAA镜泊湖风景名胜区牡丹江市景福街156号0453-69966802AAAA牡丹江市黑宝熊乐园水上大世界景区牡丹江市景福街160号0453-81045553AAAA牡丹江市飞龙潭山庄景区牡丹江市太平路317号152453953974AAAA牡丹江市三道关国家森林公园西安区菜园街26号183463489525AAAA火山口地下森林牡丹江市景福街156号138453266686AAAA黑龙江省渤海上京龙遗...        </div>
+        <div class="search-date"><a href="http://www.mdjggwh.com/html/whly/" target="_blank">文化旅游</a><em>2018-12-14 10:59:31</em>浏览 <span>0</span></div>
+      </div>
+    </div>
+<div class="page-large">
+      <div style="display:inline-block;text-align:center;width:100%;">
+   	 	     <a class="Num on" href="#" onclick="location.href='search.jspx?q=aa&token=936c3540-e181-4ebf-98cd-049643647743'">1</a>
+      </div>
+</div>  </section>
+<section class="w310">
+    
+    <section class="tag issue clearfix">
+      <div class="tag-nav"><h1><a>热门话题</a></h1></div>
+          </section>
+  </section></div>
+<footer class="footer">
+  <div class="footer-link container">
+
+  
+    <a style="margin-left:0;" href="/html/whdt/">文化地图</a><a href="/html/whhd/">文化活动</a><a href="/html/whfw/">文化服务</a><a href="/html/whcy/">文化产业</a><a href="/html/gbys/">广播影视</a><a href="/html/xwcb/">新闻出版</a><a href="/html/whsc/">文化市场</a><a href="/html/lswh/">历史文化</a><a href="/html/whmr/">文化名人</a><a href="/html/hdjl/">互动交流</a>
+  </div> 
+  <div class="copyright container"><p>     ICP备案号：黑ICP备7235725号     Powered by 牡丹江公共文化云平台 Copyright © 2018-2025 www.mdjggwh.com, All Rights Reserved</p>
+      	<p>
+  	浏览总量<span id="pv"></span> |  访客数总量 <span id="visitor"></span>|  
+  	今日浏览总量<span id="dayPv"></span>  |  今日访客数<span id="dayVisitor"></span>|  
+  	本周浏览总量<span id="weekPv"></span>  |  本周访客数<span id="weekVisitor"></span>| 
+  	本月浏览总量<span id="monthPv"></span>  |  本月访客数<span id="monthVisitor"></span>
+  	</p> 
+  </div>
+</footer>
+<script type="text/javascript" language="javascript">
+   //加入收藏
+       function AddFavorite(sURL, sTitle) {
+           sURL =encodeURI(sURL); 
+       try{   
+          window.external.addFavorite(sURL, sTitle);   
+       }catch(e) {   
+          try{   
+              window.sidebar.addPanel(sTitle, sURL, "");   
+           }catch (e){   
+              alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+          }   
+       }
+   }
+   
+   //设为首页
+   function SetHome(url){
+       if (document.all) {
+          document.body.style.behavior='url(#default#homepage)';
+             document.body.setHomePage(url);
+       }else{
+           alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+       }
+   }
+</script><div class="right-fixed">
+  <ul>
+    <!--
+    <li class="app">
+      <div class="app-logo"></div>
+    </li>
+    -->
+    <li class="weixin">
+      <div class="weixin-logo"></div>
+    </li>
+    <li class="wap">
+      <div class="wap-logo"><img src="/r/cms/www/default/images/demension.png"></div>
+    </li>
+    <li class="back-top"></li>    
+  </ul>
+  <script type="text/javascript">
+	$(function(){
+		var $body = $(document.body);;
+		var $bottomTools = $('.right-fixed');
+			$(window).scroll(function () {
+				var scrollHeight = $(document).height();
+				var scrollTop = $(window).scrollTop();
+				scrollTop > 50 ? $(".back-top").slideDown(300).css("display","block") : $(".back-top").slideUp(300);			
+			});
+			$('.back-top').click(function (e) {
+				e.preventDefault();
+				$('html,body').animate({ scrollTop:0});
+			});
+			
+	});
+  </script>
+</div></body>
+</html>

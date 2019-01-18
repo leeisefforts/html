@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>首页 - 牡丹江数字文化服务</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index.css">
+    <style>
+    .navbar-nav img{width:80%;}
+	.navbar-nav{ width:100%;}
+	
+    </style>
+	<script src="./r/cms/jquery.js" type="text/javascript"></script>
+	<script src="./js/main.js"></script>
+</head>
+<body>
+<!--标题栏-->
+<div class="background">
+	<img class="img1" src="./img/toplogo.png"/>
+    <div class="right" style="margin-right:2%;">
+    	<div class="right">
+    		<a href="./index.html">首页</a><a href="">|</a>
+			<div id="loginCsiDiv" style="float:left;"></div>
+	  
+	    	<a href="./login.html">会员中心</a></a>
+    	</div>
+    </div>
+</div>
+<!--
+<table class="code">
+	<tr>
+    	<td colspan="2" class="phone">手机移动端</td>
+    </tr>
+    <tr class="table-content">
+    	<td><img src="./img/erweima.png"/><br/>微信</td>
+        <td><img src="./img/erweima.png"/><br/>APP</td>
+    </tr>
+	
+</table>
+二维码-->
+<!-- banner -->
+<script>
+function qkeypress(){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+}
+function query(){
+	$.post("/createToken.jspx", {}, function(data) {
+		$("#token").val(data.token);
+		$("#searchForm").submit();
+	}, "json");
+}
+$(function() {
+	$("input[name='q']").bind('keypress',function(event){
+	    if(event.keyCode == 13)     
+	    {  
+	    	event.preventDefault();
+	    	query();
+	    }  
+	});
+});
+</script>
+<div id="myCarousel" class="carousel slide">
+	<!-- 搜索 -->
+	<div id="search">
+		<div class="sea">	
+		
+
+		
+		    <form name="searchForm" id="searchForm" class="bs-example bs-example-form">
+				<div>
+					<div class="">
+						<div class="input-group">
+							<input id="keyword" name="key" value="" type="text" class="form-control" >
+							<span class="input-group-btn">
+							
+							
+							
+								<button class="btn btn-default" type="button" onclick="search()" onkeyup="enterSearch()">
+									<img src="./img/search.png">
+									搜 索
+								</button>
+							</span>
+						</div><!-- /input-group -->
+					</div><!-- /.col-lg-6 -->
+				</div><!-- /.row -->
+			</form>
+		</div>
+         <div class="right-nav">
+        	<ul> 
+            	<a href="./ptjj.html"><li><img style=" max-width:80%;" src="./img/a.png" ></li></a>
+                <a href="./gzjj.html"><li><img style=" max-width:80%;" src="./img/b.png" ></li></a>
+                <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=whjj"><li><img style=" max-width:80%;" src="./img/c.png" ></li></a>
+                <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=type&tid=98"><li><img style=" max-width:80%;" src="./img/d.png" ></li></a>
+            </ul>
+        </div>
+	</div>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<img style="width:100%;" src="./img/banner.jpg" alt="First slide">
+		</div>
+	</div>
+</div> 
+<!-- 导航 -->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+	<div id="navbar-nav" style=" overflow:hidden; width:100%; text-align:center;">
+		<ul class="nav navbar-nav liwidth">
+		<!-- <li><a href="#"><img src="img/首页1.png" onmouseover="showY(this)" onmouseout="showX(this)"></img></a></li> -->
+		<li><a href="./whdt.html"><img src="./img/1.png" onmouseover="showB(this)" onmouseout="showA(this)"></img></a></li>
+		<li><a href="./whhd.html"><img src="./img/2.png" onmouseover="showD(this)" onmouseout="showC(this)"></img></a></li>
+		<li><a href="./whfw.html"><img src="./img/3.png" onmouseover="showF(this)" onmouseout="showE(this)"></img></a></li>
+		<li><a href="./whcy.html"><img src="./img/4.png" onmouseover="showH(this)" onmouseout="showG(this)"></img></a></li>
+		<li><a href="./gbys.html"><img src="./img/5.png" onmouseover="showJ(this)" onmouseout="showI(this)"></img></a></li>
+		<li><a href="./xwcb.html"><img src="./img/6.png" onmouseover="showL(this)" onmouseout="showK(this)"></img></a></li>
+		<li><a href="./whsc.html"><img src="./img/7.png" onmouseover="showN(this)" onmouseout="showM(this)"></img></a></li>
+		<li><a href="./lswh.html"><img src="./img/8.png" onmouseover="showP(this)" onmouseout="showO(this)"></img></a></li>
+		<li><a href="./whmr.html"><img src="./img/9.png" onmouseover="showR(this)" onmouseout="showQ(this)"></img></a></li>
+		<li><a href="./guestbook.html"><img src="./img/10.png" onmouseover="showT(this)" onmouseout="showS(this)"></img></a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+<!-- 页脚 -->
+<div id="footer">
+	<p>
+		ICP备案号：黑ICP备7235725号     Powered by 牡丹江公共文化云平台 Copyright © 2018-2025 www.mdjggwh.com, All Rights Reserved
+	</p>
+</div>
+<!-- banner自动轮播 -->
+<script>
+	function search(){
+		var keyword=$('#keyword').val()
+		if(keyword==''){
+			return
+		}
+		location.href='./search.html?keyword='+$('#keyword').val()
+	}
+	function enterSearch(ev){
+		var ev= ev || event
+		if(ev.keyCode ==13&&!$('#keyword').val()){
+			location.href='./search.html?keyword='+$('#keyword').val()
+		}
+	}
+//	$(function(){
+//		$('.carousel').carousel({  
+//		    interval: 2500  
+//			});
+//		// 循环轮播到某个特定的帧 
+//		$(".slide-one").click(function(){
+//			$("#myCarousel").carousel(0);
+//		});
+//		$(".slide-two").click(function(){
+//			$("#myCarousel").carousel(1);
+//		});
+//		$(".slide-three").click(function(){
+//			$("#myCarousel").carousel(2);
+//		});
+//	});
+</script>
+</body>
+</html>

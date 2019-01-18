@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="keywords" content="" />
+        <meta http-equiv="description" content="" />
+        <title>历史文化 - 牡丹江数字文化服务</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!--分页-->
+        <link rel="stylesheet" href="css/pagination.css">
+        <style>
+</style>
+    </head>
+    
+    <body>
+        <!--标题栏-->
+        <div class="background bg2">
+            <img class="img1" src="./img/toplogo.png" />
+            <div class="right" style="margin-right:2%;">
+                <div class="right">	<a href="./index.html">首页</a><a href="">|</a>
+
+                    <div id="loginCsiDiv" style="float:left;"></div>	<a href="./login.html">会员中心</a></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div id="navbar-nav" style="width:100%; text-align:center;">
+                <ul class="nav navbar-nav bird">
+                    <li>
+                        <a href="./whdt.html">
+                            <img src="./img/1.png" onmouseover="showB(this)" onmouseout="showA(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whhd.html">
+                            <img src="./img/2.png" onmouseover="showD(this)" onmouseout="showC(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whfw.html">
+                            <img src="./img/3.png" onmouseover="showF(this)" onmouseout="showE(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whcy.html">
+                            <img src="./img/4.png" onmouseover="showH(this)" onmouseout="showG(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./gbys.html">
+                            <img src="./img/5.png" onmouseover="showJ(this)" onmouseout="showI(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./xwcb.html">
+                            <img src="./img/6.png" onmouseover="showL(this)" onmouseout="showK(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whsc.html">
+                            <img src="./img/7.png" onmouseover="showN(this)" onmouseout="showM(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./lswh.html">
+                            <img src="./img/8.png" onmouseover="showP(this)" onmouseout="showO(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whmr.html">
+                            <img src="./img/9.png" onmouseover="showR(this)" onmouseout="showQ(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./guestbook.html">
+                            <img src="./img/10.png" onmouseover="showT(this)" onmouseout="showS(this)"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--内容区-->
+        <div class="body-content">
+            <!--title-->
+            <div class="title">
+                <p>历史文化</p>
+                <p>首页>历史文化</p>
+            </div>
+            <!--主要显示区-->
+            <div class="sm-nav">
+                <ul>
+                    <li><a href="#" id="b1" style="border-bottom:2px solid #13c7a9; line-height:53px; display:inline-block; color:#13c7a9;">文化城市VR展示</a>
+                    </li>
+                    <li><a href="#" id="b2" onclick="getData(54)">遗址遗迹</a>
+                    </li>
+                    <li><a href="#" id="b3" onclick="getData(55)">可移动文物</a>
+                    </li>
+                    <li><a href="#" id="b4" onclick="getData(56)">非物质文化遗产</a>
+                    </li>
+                    <li><a href="#" id="b5" onclick="getData(57)">历史回顾</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box1" style="padding:40px 0; position:relative;" id="bb1">
+                <a href="http://www.mdjggwh.com/vr/1/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture1.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">东宁市文化城市</p>
+		            </div>
+		        </a>
+		        <a href="http://www.mdjggwh.com/vr/2/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture2.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">海林市文化城市</p>
+		            </div>
+		        </a>
+		        <a href="http://www.mdjggwh.com/vr/3/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture3.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">林口县文化城市</p>
+		            </div>
+		        </a>
+		        <a href="http://www.mdjggwh.com/vr/4/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture4.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">牡丹江文化城市</p>
+		            </div>
+		        </a>
+		        <a href="http://www.mdjggwh.com/vr/5/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture5.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">穆棱市文化城市</p>
+		            </div>
+		        </a>
+		        <a href="http://www.mdjggwh.com/vr/6/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture6.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">宁安市文化城市</p>
+		            </div>
+		        </a>
+				<a href="http://www.mdjggwh.com/vr/7/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture7.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">爱民区文化馆</p>
+		            </div>
+		        </a>
+				<a href="http://www.mdjggwh.com/vr/8/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture8.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">绥芬河市文化城市</p>
+		            </div>
+		        </a>
+				<a href="http://www.mdjggwh.com/vr/9/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture9.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">渤海靺鞨绣馆</p>
+		            </div>
+		        </a>
+				<a href="http://www.mdjggwh.com/vr/10/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture10.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">东安区文化馆</p>
+		            </div>
+		        </a><a href="http://www.mdjggwh.com/vr/11/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture11.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">红罗女画廊</p>
+		            </div>
+		        </a>
+				<a href="http://www.mdjggwh.com/vr/12/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture12.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">牡丹江边墙</p>
+		            </div>
+		        </a>
+				 </a><a href="http://www.mdjggwh.com/vr/13/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture13.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">牡丹江大学博物馆</p>
+		            </div>
+		        </a>
+				 </a><a href="http://www.mdjggwh.com/vr/14/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture14.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">牡丹江革命英烈纪念馆</p>
+		            </div>
+		        </a>
+				 </a><a href="http://www.mdjggwh.com/vr/15/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture15.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">牡丹江市朝鲜民族艺术馆、图书馆</p>
+		            </div>
+		        </a>
+				 </a><a href="http://www.mdjggwh.com/vr/16/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture16.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">牡丹江市工人文化宫</p>
+		            </div>
+		        </a>
+				 </a><a href="http://www.mdjggwh.com/vr/17/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture17.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">唐满格格满族旗袍展示馆</p>
+		            </div>
+		        </a>
+				 </a><a href="http://www.mdjggwh.com/vr/18/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture18.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">西安区文化馆</p>
+		            </div>
+		        </a>
+				 </a><a href="http://www.mdjggwh.com/vr/19/html/index.html" class="sm-box sm-box2">
+		        	<div><img style="width:100%;" src="./img/picture19.jpg"/></div>
+		            <div class="box-down">
+		            	<p class="sm-title center">阳明区文化馆</p>
+		            </div>
+		        </a>
+                <div class="pagination"></div>
+            </div>
+            <div class="box1" style="padding:40px 0; display:none; position:relative;" id="bb2">
+                <ul style="line-height:40px;">
+                    
+                </ul>
+                <!--<div class="page-large">
+                    <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+ <a class="Num" href="#" onclick="location.href='index_2.html'">2</a>
+ <a class="Num" href="#" onclick="location.href='index_3.html'">3</a>
+
+                        <a class="next-page" href="#" onclick="location.href='index_2.html'"></a>
+                    </div>
+                </div>-->
+                <div class="pagination"></div>
+            </div>
+            <div class="box1" style="padding:40px 0;display:none; position:relative;" id="bb3">
+                <ul style="line-height:40px;">
+                    
+                </ul>
+                <!--<div class="page-large">
+                    <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                    </div>
+                </div>-->
+                <div class="pagination"></div>
+            </div>
+            <div class="box1" style="padding:40px 0;display:none; position:relative;" id="bb4">
+                <ul style="line-height:40px;">
+                    
+                </ul>
+                <!--<div class="page-large">
+                    <div style="display:inline-block;text-align:center;width:100%;">	<a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+	<a class="Num" href="#" onclick="location.href='index_2.html'">2</a>
+	<a class="Num" href="#" onclick="location.href='index_3.html'">3</a>
+	<a class="Num" href="#" onclick="location.href='index_4.html'">4</a>
+
+                        <a
+                        class="Num" href="#" onclick="location.href='index_5.html'">5</a> <a class="Num none">...</a>
+ <a class="Num" href="#" onclick="location.href='index_12.html'">12</a>
+
+                            <a class="next-page" href="#" onclick="location.href='index_2.html'"></a>
+                    </div>
+                </div>-->
+                <div class="pagination"></div>
+            </div>
+            <div class="box1" style="padding:40px 0;display:none; position:relative;" id="bb5">
+                <ul style="line-height:40px;">
+                    
+                </ul>
+                <!--<div class="page-large">
+                    <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                    </div>
+                </div>-->
+                <div class="pagination"></div>
+            </div>
+        </div>
+        <!--右侧导航-->
+        <div class="right-nav2">
+            <ul style="list-style:none">
+                <a href="./ptjj.html">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/a.png">
+                    </li>
+                </a>
+                <a href="./gzjj.html">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/b.png">
+                    </li>
+                </a>
+                <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=whjj">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/c.png">
+                    </li>
+                </a>
+                <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=type&tid=98">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/d.png">
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div id="footer1">
+            <p>ICP备案号：黑ICP备7235725号 Powered by 牡丹江公共文化云平台 Copyright © 2018-2025 www.mdjggwh.com, All Rights Reserved</p>
+        </div>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+<script>
+	function getData(id) {
+        var id = id || 54
+        $.post('http://132.232.133.48:8889/admin/getinfo/', {
+            f0: 7,
+            f1: id,
+        }, function(data) {
+            if (data.code == 200) {
+                var str = ''
+                for (var i = 0; i < data.list.length; i++) {
+                	if(id==53){
+                		str += `<a href="#" class="sm-box sm-box2">
+				                    <div>
+				                        <img style="width:100%;" src="` + data.list[i].image + `" />
+				                    </div>
+				                    <div class="box-down">
+				                        <p class="sm-title center">` + data.list[i].title + `</p>
+				                    </div>
+				                </a>`
+                	}else{
+                		str += `<a href="./content.html?id=` + data.list[i].id + `&type=lswh">
+			                <li class="box">
+			                   <p>` + data.list[i].title + `</p>
+							 
+			                   <p class="data">` + data.list[i].time + `</p>
+			                </li>
+			            </a>`
+                	}
+                }
+            	switch (id) {
+                	case 54: $('#bb2 ul').html(str)
+                	break;
+                	case 55: $('#bb3 ul').html(str)
+                	break;
+                	case 56: $('#bb4 ul').html(str)
+                	break;
+                	case 57: $('#bb5 ul').html(str)
+                	break;
+                }
+            }
+        })
+    }
+</script>
+</html>

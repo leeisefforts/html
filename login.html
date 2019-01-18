@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>会员登录 - 牡丹江数字文化服务 - Powered by JEECMS</title>
+        <script src="./r/cms/jquery.js" type="text/javascript"></script>
+        <script src="./r/cms/front.js" type="text/javascript"></script>
+        <link type="text/css" rel="stylesheet" href="./r/cms/www/default/css/index.css" />
+        <!--[if lt IE 9]>
+            <script src="./r/cms/www/default/js/html5shiv.min.js"></script>
+            <script src="./r/cms/www/default/js./respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+        	if(localStorage.getItem('userName')){
+        		alert('您已登陆')
+        		location.href='./guestbook.html'
+        	}
+            $(function() {
+                $("#jvForm").validate();
+            });
+        </script>
+    </head>
+    
+    <body style="background-color:#f7f7f7;">
+        <section class="top">
+            <div class="yellow"></div>
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="yellow"></div>
+            <div class="red"></div>
+        </section>
+        <link rel="stylesheet" type="text/css" href="./r/cms/www/default/css/login.css" />
+        <script>
+            function qkeypress() {
+                var q = $("input[name=q]");
+                if (q.val().trim() != "") {
+                    $("input[name=q]").autocomplete("enable");
+                } else {
+                    $("input[name=q]").autocomplete("disable");
+                }
+            }
+
+            function query() {
+                $.post("/createToken.jspx", {}, function(data) {
+                    $("#token").val(data.token);
+                    $("#searchForm").submit();
+                }, "json");
+            }
+            $(function() {
+                $("input[name='q']").bind('keypress', function(event) {
+                    if (event.keyCode == 13) {
+                        event.preventDefault();
+                        query();
+                    }
+                });
+            });
+        </script>
+        <header class="header rel">
+            <div class="header-jf"><a class="jf-btn" name="gb2big5" id="gb2big5">繁</a>
+            </div>
+            <Script Language=Javascript Src="./r/cms/gb2big5.js"></Script>
+            <!--<div class="header-rss"><a class="rss-btn" href="./rss.jspx" target="_blank" title="RSS订阅">RSS</a>
+            </div>
+            <div class="header-tag"><a class="tag-btn" href="/tag.jspx" target="_blank" title="Tags标签">Tags</a>
+            </div>-->
+            <div class="container clearfix">
+                <a class="logo" href="/"></a>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="./ptjj.html">平台简介</a>
+                        </li>
+                        <li><a href="./whdt.html">文化地图</a>
+                        </li>
+                        <li><a href="./whhd.html">文化活动</a>
+                        </li>
+                        <li class="more"> <a href="./whfw.html">文化服务</a>
+
+                            <ul class="menu-child">
+                                <li><a href="./whcy.html">文化产业</a>
+                                </li>
+                                <li><a href="./gbys.html">广播影视</a>
+                                </li>
+                                <li><a href="./xwcb.html">新闻出版</a>
+                                </li>
+                                <li><a href="./whsc.html">文化市场</a>
+                                </li>
+                                <li><a href="./lswh.html">历史文化</a>
+                                </li>
+                                <li><a href="./whmr.html">文化名人</a>
+                                </li>
+                                <li><a href="./hdjl.html">互动交流</a>
+                                </li>
+                                <li><a href="./gzjj.html">工作简介</a>
+                                </li>
+                                <li><a href="./jqjj.html">局情简介</a>
+                                </li>
+                                <li><a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=whjj">今日聚焦</a>
+                                </li>
+                                <li><a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=type&tid=98">公告公示</a>
+                                </li>
+                                <li><a href="./guestbook.html">留言板</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-r">
+                    <div class="search">
+                        <input type="text" name="q" value="" maxlength="50" autocomplete="off" class="searchCon" style="width:202px;" onkeyup="enterSearch()" id="keyword">
+                        <input type="button" value="" class="searchMenu" onclick="search()">
+                    </div>
+                    <div id="loginCsiDiv" style="float:left;"></div>
+                    <!--<script type="text/javascript">
+                        $(function() {
+                            Cms.loginCsi("", "loginCsiDiv", {
+                                "returnUrl": "http://www.mdjggwh.com/login.jspx"
+                            });
+                        });
+                    </script>-->
+                </div>
+            </div>
+        </header>
+        <div class="register-box login-box">
+            <div class="register-nav"><span>会员登录</span>
+                <div class="register-login">没有账号，<a class="tc" href="./register.html">立即注册 ></a>
+                </div>
+            </div>
+            <form id="jvForm">
+                <div class="username-con"><i></i>
+                    <input id="username" name="username" class="required login-input" type="text" placeholder="用户名">
+                </div>
+                <div class="password-con"><i></i>
+                    <input id="password" name="userpassword" class="required password-input" type="password" placeholder="密码">
+                </div>
+                <div class="login-rem clearfix">
+                <div class="next-day" style="float: right; margin-bottom: 26px;">
+                        <!--<input type="checkbox" class="login-checkbox" value="true" name="rememberMe">下次自动登录</div>--> 
+                        <!--<a href="/member/forgot_password.jspx">忘记密码</a>-->
+                </div>
+                <!--<input type="hidden" name="token" value="" />-->
+                <div class="btn" onclick="login()">立即登陆</div>
+                <!--<input type="submit" class="login-btn" value="登 录">-->
+                <!-- <div class="quick">-->
+                <!--<p>一键登录</p>-->
+                <!--<div class="quick-list clearfix">
+                    <a class="quick-qq" id="qqLoginBtn" title="用QQ账号登录"></a>
+                    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101139646" data-redirecturi="http://www.mdjggwh.com/public_auth.jspx" charset="utf-8"></script>
+                    <script type="text/javascript">
+                        //插入按钮的节点qqLoginBtn id
+                        QC.Login({
+                            btnId: "qqLoginBtn",
+                            size: "A_M"
+                        }, function(reqData, opts) { //登录成功
+                            //根据返回数据，更换按钮显示状态方法
+                            var dom = document.getElementById(opts['btnId']),
+                                _logoutTemplate = [
+                                    //头像
+                                    //   '<span><img src="{figureurl}" class="{size_key}"/></span>',
+                                    //昵称
+                                    '<span>{nickname}</span>',
+                                    //退出
+                                    '<span><a href="javascript:QC.Login.signOut();">退出</a></span>'
+                                ].join("");
+                            dom && (dom.innerHTML = QC.String.format(_logoutTemplate, {
+                                nickname: QC.String.escHTML(reqData.nickname), //做xss过滤
+                                figureurl: reqData.figureurl
+                            }));
+                            var userId = null;
+                            if (QC.Login.check() && userId == null) {
+                                QC.Login.signOut();
+                            }
+                        });
+                    </script>
+                    <a class="quick-tx" id="qqwebo_login_btn" title="用腾讯微博账号登录"></a>
+                    <script type="text/javascript" src="http://mat1.gtimg.com/app/openjs/openjs.js"></script>
+                    <script type="text/javascript">
+                        T.init({
+                            appkey: 801526383,
+                            autoclose: false,
+                            callbackurl: "http://www.mdjggwh.com/public_auth.jspx"
+                        });
+
+                        function logout() {
+                            T.logout(function(loginStatus) { // 登出用户
+                                // 登录成功
+                            });
+                        }
+                        $(function() {
+                            $("#qqwebo_login_btn").click(function() {
+                                T.login(function(loginStatus) { // 弹出登录窗口
+                                    // 本次登录成功
+                                    $.cookie("qqWeboId", loginStatus.openid);
+                                }, function(error) {});
+                            });
+                        });
+                    </script>
+                    <a class="quick-sina" id="wb_connect_btn" title="用新浪微博账号登录"></a>
+                    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2510334929" type="text/javascript" charset="utf-8"></script>
+                    <script type="text/javascript">
+                        WB2.anyWhere(function(W) {
+                            W.widget.connectButton({
+                                id: "wb_connect_btn",
+                                type: '3,2',
+                                callback: {
+                                    login: function(o) {
+                                        //登录成功之后执行
+                                        location = "/public_auth.jspx";
+                                    },
+                                    logout: function() {
+                                        //退出之后执行退出本地用户
+                                        location = "/logout.jspx?returnUrl=/";
+                                    }
+                                }
+                            });
+                        });
+                    </script>
+                    <a href="/weixin_login.jspx" class="quick-weixin" title="微信账号登录"></a>
+                </div>-->
+        </div>
+        </form>
+        </div>
+        <footer class="footer">
+            <div class="footer-link container"> <a style="margin-left:0;" href="./whdt.html">文化地图</a><a href="./whhd.html">文化活动</a><a href="./whfw.html">文化服务</a><a href="./whcy.html">文化产业</a><a href="./gbys.html">广播影视</a><a href="./xwcb.html">新闻出版</a><a href="./whsc.html">文化市场</a><a href="./lswh.html">历史文化</a>
+                <a
+                href="./whmr.html">文化名人</a><a href="./guestbook.html">互动交流</a>
+
+            </div>
+            <div class="copyright container">
+                <p>ICP备案号：黑ICP备7235725号 Powered by 牡丹江公共文化云平台 Copyright © 2018-2025 www.mdjggwh.com, All Rights Reserved</p>
+                <p>浏览总量<span id="pv"></span> | 访客数总量 <span id="visitor"></span>| 今日浏览总量<span id="dayPv"></span> | 今日访客数<span id="dayVisitor"></span>| 本周浏览总量<span id="weekPv"></span> | 本周访客数<span id="weekVisitor"></span>| 本月浏览总量<span id="monthPv"></span> | 本月访客数<span id="monthVisitor"></span>
+
+                </p>
+            </div>
+        </footer>
+        <script type="text/javascript" language="javascript">
+            //加入收藏
+            function AddFavorite(sURL, sTitle) {
+                sURL = encodeURI(sURL);
+                try {
+                    window.external.addFavorite(sURL, sTitle);
+                } catch (e) {
+                    try {
+                        window.sidebar.addPanel(sTitle, sURL, "");
+                    } catch (e) {
+                        alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+                    }
+                }
+            }
+
+            //设为首页
+            function SetHome(url) {
+                if (document.all) {
+                    document.body.style.behavior = 'url(#default#homepage)';
+                    document.body.setHomePage(url);
+                } else {
+                    alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+                }
+            }
+        </script>
+        <div class="right-fixed">
+            <ul>
+                <!-- <li class="app">
+      <div class="app-logo"></div>
+    </li>
+    -->
+                <li class="weixin">
+                    <div class="weixin-logo"></div>
+                </li>
+                <li class="wap">
+                    <div class="wap-logo">
+                        <img src="./r/cms/www/default/images/demension.png">
+                    </div>
+                </li>
+                <li class="back-top"></li>
+            </ul>
+            <script type="text/javascript">
+                $(function() {
+                    var $body = $(document.body);;
+                    var $bottomTools = $('.right-fixed');
+                    $(window).scroll(function() {
+                        var scrollHeight = $(document).height();
+                        var scrollTop = $(window).scrollTop();
+                        scrollTop > 50 ? $(".back-top").slideDown(300).css("display", "block") : $(".back-top").slideUp(300);
+                    });
+                    $('.back-top').click(function(e) {
+                        e.preventDefault();
+                        $('html,body').animate({
+                            scrollTop: 0
+                        });
+                    });
+
+                });
+                function login(){
+                	var data = {};
+			        var t = $('#jvForm').serializeArray();
+			        $.each(t, function () {
+			            data[this.name] = this.value;
+			        });
+                	if(data.username==''){
+                		$('#username').parent().append('<label for="username" generated="true" class="error">请输入用户名</label>')
+        				return
+                	}
+                	if(data.userpassword==''){
+                		$('#password').parent().append('<label for="password" generated="true" class="error">请输入密码</label>')
+        				return
+                	}
+                	$.post('http://132.232.133.48:8889/admin/userlogin/',data,function(res){
+                		console.log(res)
+                		console.log(res.code)
+                		console.log(typeof(res))
+                		if(res.code==-1){
+                			return alert(res.msg)
+                		}
+                		if(res.code==200){
+                			alert(res.msg)
+                			localStorage.setItem('userName',data.username)
+                			location.href='./guestbook.html'
+                		}
+                	})
+                }
+                function search(){
+					var keyword=$('#keyword').val()
+					if(keyword==''){
+						return
+					}
+					location.href='./search.html?keyword='+$('#keyword').val()
+				}
+                function enterSearch(ev){
+					var ev= ev || event
+					if(ev.keyCode ==13&&$('#keyword').val()!=''){
+						location.href='./search.html?keyword='+$('#keyword').val()
+					}
+				}
+            </script>
+        </div>
+    </body>
+
+</html>
+<style>
+	.btn{
+		text-align: center;
+	    color: #fff;
+	    font-size: 16px;
+	    line-height: 36px;
+	    height: 36px;
+	    border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    -o-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    background-color: #ef3838;
+	    cursor: pointer;
+	    -webkit-user-select:none;
+	    -moz-user-select:none;
+	    -ms-user-select:none;
+	    user-select:none;
+	    clear: both;
+	}
+</style>

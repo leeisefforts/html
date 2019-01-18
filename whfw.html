@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>文化服务 - 牡丹江数字文化服务</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!--分页-->
+        <link rel="stylesheet" href="css/pagination.css">
+        <style>
+        	.navbar-nav img{width:80%;}
+			.navbar-nav{ margin-left:10%; padding:0; margin:0; width:100%;}
+		</style>
+    </head>
+    
+    <body>
+        <!--标题栏-->
+        <div class="background bg2">
+            <img class="img1" src="./img/toplogo.png" />
+            <div class="right" style="margin-right:2%;">
+                <div class="right">	<a href="./index.html">首页</a><a href="">|</a>
+
+                    <div id="loginCsiDiv" style="float:left;"></div>	<a href="./login.html">会员中心</a></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div id="navbar-nav" style="width:100%; text-align:center;">
+                <ul class="nav navbar-nav bird">
+                    <li>
+                        <a href="./whdt.html">
+                            <img src="./img/1.png" onmouseover="showB(this)" onmouseout="showA(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whhd.html">
+                            <img src="./img/2.png" onmouseover="showD(this)" onmouseout="showC(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whfw.html">
+                            <img src="./img/3.png" onmouseover="showF(this)" onmouseout="showE(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whcy.html">
+                            <img src="./img/4.png" onmouseover="showH(this)" onmouseout="showG(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./gbys.html">
+                            <img src="./img/5.png" onmouseover="showJ(this)" onmouseout="showI(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./xwcb.html">
+                            <img src="./img/6.png" onmouseover="showL(this)" onmouseout="showK(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whsc.html">
+                            <img src="./img/7.png" onmouseover="showN(this)" onmouseout="showM(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./lswh.html">
+                            <img src="./img/8.png" onmouseover="showP(this)" onmouseout="showO(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./whmr.html">
+                            <img src="./img/9.png" onmouseover="showR(this)" onmouseout="showQ(this)"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./guestbook.html">
+                            <img src="./img/10.png" onmouseover="showT(this)" onmouseout="showS(this)"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--内容区-->
+        <div class="body-content">
+            <!--title-->
+            <div class="title">
+                <p>文化服务</p>
+                <p>首页>文化服务</p>
+            </div>
+            <!--小导航-->
+            <div class="sm-nav">
+                <ul>
+                    <li><a href="#" id="b1" style="border-bottom:2px solid #13c7a9; line-height:53px; display:inline-block; color:#13c7a9;" onclick="gerData(20)">政策法规</a>
+                    </li>
+                    <li><a href="#" id="b2" onclick="gerData(21)">审批服务</a>
+                    </li>
+                    <li><a href="#" id="b3" onclick="gerData(22)">地方文艺精品欣赏</a>
+                    </li>
+                    <li><a href="#" id="b4" onclick="gerData(23)">我要预约</a>
+                    </li>
+                    <li><a href="http://zq.bookan.com.cn/?t=index&id=21278">网上书房</a>
+                    </li>
+                    <li><a href="#" id="b6" onclick="gerData(24)">网站链接</a>
+                    </li>
+                </ul>
+            </div>
+            <!--主要显示区-->
+            <div class="box1" style="padding:40px 0;" id="bb1">
+                <ul style="line-height:40px;"></ul>
+                <!--<div class="page-large">
+                    <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+ <a class="Num" href="#" onclick="location.href='index_2.html'">2</a>
+
+                        <a class="next-page" href="#" onclick="location.href='index_2.html'"></a>
+                    </div>
+                </div>-->
+                <div class="pagination"></div>
+            </div>
+            <!--2-->
+            <div style=" display:none;" id="bb2">
+                <div class="box1 tiaozheng" style="padding:40px 0; " id="a11">
+                    <ul style="line-height:40px;">
+                        <!--<a href="http://www.mdjggwh.com/spfwa/813.jhtml">
+                            <li class="box">
+                                <p>设置卫星地面接收设施接收境内电视节目许可服务指南</p>
+                                <p class="data">2018-12-06 09:37:17</p>
+                            </li>
+                        </a>-->
+                    </ul>
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <!--3-->
+            <!--分类块-->
+            <div class="box1" style="display:none;" id="bb3">
+                <div style="padding:40px 0;">
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <!--4-->
+            <div id="bb4" style="display:none;">
+                <!--分类块-->
+                <!--小导航-->
+                <!--主要显示区-->
+                <div class="box1 tiaozheng" id="c11">
+                    <!--<div class="page-large">
+                        <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                        </div>
+                    </div>-->
+                    <div class="pagination"></div>
+                </div>
+                <!--主要显示区2-->
+                <div class="box1 tiaozheng" id="c22" style="display:none;">
+                    <div class="pagination"></div>
+                </div>
+                <!--主要显示区3-->
+                <div class="box1 tiaozheng" id="c33" style="display:none;">
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <!--5-->
+            <div class="box1 tiaozheng2" id="bb5">
+                <div class="box-center">
+                    <input placeholder="数据库统一检索" type="text" />
+                    <img src="./img/search1.png" />
+                </div>
+                <!--书籍1-->
+                <!--书籍结束-->
+                <div class="pagination"></div>
+            </div>
+            <!--6-->
+            <div class="box1" style="padding:40px 0; display:none;" id="bb6">
+                <ul style="line-height:40px;">
+					
+                </ul>
+                <!--<div class="page-large">
+                    <div style="display:inline-block;text-align:center;width:100%;"> <a class="Num on" href="#" onclick="location.href='index.html'">1</a>
+
+                    </div>
+                </div>-->
+                <div class="pagination"></div>
+            </div>
+            <!--6结束-->
+        </div>
+        <div class="right-nav2">
+            <ul style="list-style:none">
+                <a href="./ptjj.html">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/a.png">
+                    </li>
+                </a>
+                <a href="./gzjj.html">
+                    <li>
+                        <img style=" max-width:80%;" src="./img/b.png">
+                    </li>
+                </a>
+                <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=whjj">
+		            <li>
+		                <img style=" max-width:80%;" src="./img/c.png">
+		            </li>
+		        </a>
+		        <a href="http://www.mdjwgxj.gov.cn/index.php?c=article&a=type&tid=98">
+		            <li>
+		                <img style=" max-width:80%;" src="./img/d.png">
+		            </li>
+		        </a>
+            </ul>
+        </div>
+        <div id="footer1">
+            <p>ICP备案号：黑ICP备7235725号 Powered by 牡丹江公共文化云平台 Copyright © 2018-2025 www.mdjggwh.com, All Rights Reserved</p>
+        </div>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+            function gerData(id){
+            	var id = id || 20
+            	$.post('http://132.232.133.48:8889/admin/getinfo/', {
+	                f0: 2,
+	                f1: id
+	            }, function(data) {
+	                if (data.code == 200) {
+	                    var str = ''
+	                    for (var i = 0; i < data.list.length; i++) {
+	                    	if(id==22){
+	                    		str+=`<a href="./video.html?id=` + data.list[i].id + `&type=whfw" class="sm-box sm-box2">
+				                        <div>
+				                            <img style="width:100%;" src="`+data.list[i].image+`" />
+				                        </div>
+				                        <div class="box-down">
+				                            <p class="sm-title center">`+data.list[i].title+`</p>
+				                        </div>
+				                    </a>`
+	                    	}else{
+	                    		str += `<a href="./content.html?id=` + data.list[i].id + `&type=whfw">
+					                <li class="box">
+					                   <p>` + data.list[i].title + `</p>
+									 
+					                   <p class="data">` + data.list[i].time + `</p>
+					                </li>
+					            </a>`
+	                    	}
+	                        
+	                    }
+	                    switch(id){
+	                    	case 20 : $('#bb1 ul').html(str)
+	                    	break;
+	                    	case 21 : $('#bb2 ul').html(str)
+	                    	break;
+	                    	case 24 : $('#bb6 ul').html(str)
+	                    	break;
+	                    	case 22 : $('#bb3 div').html(str)
+	                    	break;
+	                    }
+	                    
+	                }
+	            })
+            }
+            gerData()
+        </script>
+    </body>
+
+</html>
