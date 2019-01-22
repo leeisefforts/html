@@ -137,14 +137,27 @@
 	},function(data){
 		if(data.code==200){
 			var str=''
-			if(data.result[0].content_title!=''&&data.result[0].content_title!=null){
-				str = '<div class="container"><div class="content-title">'+data.result[0].content_title+'</div><video src="'+data.result[0].content_url+'"></video></div>'
-				$('#title').html(data.result[0].content_title)
-			}else if(data.result[0].title!=''&&data.result[0].title!=null){
-				str = '<div class="container"><div class="content-title">'+data.result[0].title+'</div><video src="'+data.result[0].content_url+'"></video></div>'
-				$('#title').html(data.result[0].title)
+//			<video class="edui-upload-video  vjs-default-skin video-js" controls="" preload="none" width="420" height="280" src="http://www.mdjggwh.com:80/u/cms/www/201812/19195655q0mv.mp4" data-setup="{}"><source src="http://www.mdjggwh.com:80/u/cms/www/201812/19195655q0mv.mp4" type="video/mp4"></video>
+			if(data.result[0].content_url.indexOf('.swf')==-1){
+				if(data.result[0].content_title!=''&&data.result[0].content_title!=null){
+					str = '<div class="container"><div class="content-title">'+data.result[0].content_title+'</div><video src="'+data.result[0].content_url+'" controls="" preload="none"><source src="'+data.result[0].content_url+'" type="video"></video></div>'
+					$('#title').html(data.result[0].content_title)
+				}else if(data.result[0].title!=''&&data.result[0].title!=null){
+					str = '<div class="container"><div class="content-title">'+data.result[0].title+'</div><video src="'+data.result[0].content_url+'" controls="" preload="none"><source src="'+data.result[0].content_url+'" type="video"></video></div>'
+					$('#title').html(data.result[0].title)
+				}else{
+					str = '<div class="container"><video src="'+data.result[0].content_url+'" controls="" preload="none"><source src="'+data.result[0].content_url+'" type="video"></video></div>'
+				}
 			}else{
-				str = '<div class="container"><video src="'+data.result[0].content_url+'"></video></div>'
+				if(data.result[0].content_title!=''&&data.result[0].content_title!=null){
+					str = '<div class="container"><div class="content-title">'+data.result[0].content_title+'</div><embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" src="'+data.result[0].content_url+'" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true"></div>'
+					$('#title').html(data.result[0].content_title)
+				}else if(data.result[0].title!=''&&data.result[0].title!=null){
+					str = '<div class="container"><div class="content-title">'+data.result[0].title+'</div><embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" src="'+data.result[0].content_url+'" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true"></div>'
+					$('#title').html(data.result[0].title)
+				}else{
+					str = '<div class="container"><embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" src="'+data.result[0].content_url+'" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true"></div>'
+				}
 			}
 			$('#content').html(str)
 		}
